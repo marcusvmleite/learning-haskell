@@ -21,3 +21,7 @@ square x = x ^ 2
 ifEvenIncNew x = ifEvenCustomized inc x
 ifEvenDoubleNew x = ifEvenCustomized double x
 ifEvenSquareNew x = ifEvenCustomized square x
+
+closureIfEven f = (\x -> ifEvenCustomized f x)
+
+ifEvenIncClosure = closureIfEven inc
